@@ -14,10 +14,12 @@ public class Registrarse extends javax.swing.JFrame {
     /**
      * Creates new form Registrarse
      */
+    
+    private Usuario usuario;
+    
     public Registrarse() {
         initComponents();
         this.setLocationRelativeTo(null);
-
     }
 
     /**
@@ -37,6 +39,7 @@ public class Registrarse extends javax.swing.JFrame {
         textoPassword = new javax.swing.JTextField();
         textoVerificarPassword = new javax.swing.JTextField();
         botonTerminar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -91,13 +94,16 @@ public class Registrarse extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Gill Sans MT", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 0, 0));
+
         javax.swing.GroupLayout panelBlancoLayout = new javax.swing.GroupLayout(panelBlanco);
         panelBlanco.setLayout(panelBlancoLayout);
         panelBlancoLayout.setHorizontalGroup(
             panelBlancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panelNegro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBlancoLayout.createSequentialGroup()
-                .addGap(0, 310, Short.MAX_VALUE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(panelBlancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBlancoLayout.createSequentialGroup()
                         .addComponent(botonTerminar, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -108,20 +114,26 @@ public class Registrarse extends javax.swing.JFrame {
                             .addComponent(textoUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(textoVerificarPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(298, 298, 298))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBlancoLayout.createSequentialGroup()
+                .addContainerGap(188, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 494, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(167, 167, 167))
         );
         panelBlancoLayout.setVerticalGroup(
             panelBlancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBlancoLayout.createSequentialGroup()
                 .addComponent(panelNegro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(198, 198, 198)
+                .addGap(137, 137, 137)
                 .addComponent(textoUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(textoPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(textoVerificarPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(botonTerminar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(75, 75, 75))
+                .addContainerGap(116, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout panelRojoLayout = new javax.swing.GroupLayout(panelRojo);
@@ -156,7 +168,15 @@ public class Registrarse extends javax.swing.JFrame {
     }//GEN-LAST:event_textoPasswordActionPerformed
 
     private void botonTerminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonTerminarActionPerformed
-        // TODO add your handling code here:
+        if(textoPassword.getText().equals(textoVerificarPassword.getText()))
+        {
+            usuario = new Usuario(textoUserName.getText(), textoPassword.getText());
+            //Añadir el usuario a la base de datos de usuarios
+        }
+        else
+        {
+            jLabel1.setText("Las contraseñas son distintas, introduzca la misma contraseña en las dos casillas");
+        }
     }//GEN-LAST:event_botonTerminarActionPerformed
 
     /**
@@ -196,6 +216,7 @@ public class Registrarse extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonTerminar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel labelIconoUrjc;
     private javax.swing.JPanel panelBlanco;
     private javax.swing.JPanel panelNegro;
