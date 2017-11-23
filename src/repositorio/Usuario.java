@@ -16,6 +16,7 @@ public class Usuario {
     private String password;
     private String correo="";
     private ImageIcon perfilImage;
+    private int id;
     
     public Usuario(String un, String pw)
     {
