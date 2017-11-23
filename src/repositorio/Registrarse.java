@@ -35,6 +35,7 @@ public class Registrarse extends javax.swing.JFrame {
         panelBlanco = new javax.swing.JPanel();
         panelNegro = new javax.swing.JPanel();
         labelIconoUrjc = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         textoUserName = new javax.swing.JTextField();
         textoPassword = new javax.swing.JTextField();
         textoVerificarPassword = new javax.swing.JTextField();
@@ -52,12 +53,16 @@ public class Registrarse extends javax.swing.JFrame {
 
         labelIconoUrjc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/URJ_logo_BN_NEG_corona_roja (2).jpg"))); // NOI18N
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/image-iloveimg-resized.png"))); // NOI18N
+
         javax.swing.GroupLayout panelNegroLayout = new javax.swing.GroupLayout(panelNegro);
         panelNegro.setLayout(panelNegroLayout);
         panelNegroLayout.setHorizontalGroup(
             panelNegroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelNegroLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelNegroLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addGap(33, 33, 33)
                 .addComponent(labelIconoUrjc, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -65,7 +70,11 @@ public class Registrarse extends javax.swing.JFrame {
             panelNegroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelNegroLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(labelIconoUrjc, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panelNegroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelIconoUrjc, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelNegroLayout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addContainerGap())))
         );
 
         textoUserName.setFont(new java.awt.Font("Gill Sans MT", 0, 14)); // NOI18N
@@ -123,7 +132,7 @@ public class Registrarse extends javax.swing.JFrame {
             panelBlancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBlancoLayout.createSequentialGroup()
                 .addComponent(panelNegro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(137, 137, 137)
+                .addGap(154, 154, 154)
                 .addComponent(textoUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(textoPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -133,7 +142,7 @@ public class Registrarse extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(botonTerminar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addContainerGap(85, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout panelRojoLayout = new javax.swing.GroupLayout(panelRojo);
@@ -217,6 +226,7 @@ public class Registrarse extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonTerminar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel labelIconoUrjc;
     private javax.swing.JPanel panelBlanco;
     private javax.swing.JPanel panelNegro;
